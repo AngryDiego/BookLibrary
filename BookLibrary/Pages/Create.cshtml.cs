@@ -15,7 +15,7 @@ public class CreateModel : PageModel
     }
     
     [BindProperty]
-    public Book newBook { get; set; }
+    public Book NewBook { get; set; }
 
     public void OnGet()
     {
@@ -25,7 +25,7 @@ public class CreateModel : PageModel
 
     public async Task<IActionResult> OnPostAsync()
     {
-        _context.BookShelf.Add(newBook);
+        _context.BookShelf.Add(NewBook);
         await _context.SaveChangesAsync();
         return RedirectToPage("Index");
     }

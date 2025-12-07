@@ -9,11 +9,21 @@
 
 <html>
 <head>
-    <title></title>
+    <title>CREATE PORNUSHKA</title>
 </head>
-<body>
-<div>
-    
-</div>
-</body>
+    <body>
+    <h1>Create book</h1>
+    <form method="post">
+        <label>Title:</label>
+        <input asp-for="NewBook.Title" class="form-control">
+
+        <label>Author:</label>
+        <input asp-for="NewBook.Author" class="form-control">
+
+        <label>Release date:</label>
+        <input asp-for="NewBook.ReleaseDate" class="form-control">
+        
+        <button type="submit" class="btn btn-succes mt-2">Create</button>
+    </form>
+    </body>
 </html>

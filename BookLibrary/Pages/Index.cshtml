@@ -9,12 +9,35 @@
 
 <html>
 <head>
-    <title></title>
+    <title>PORNUHA</title>
 </head>
-<body>
-<div>
-    
 
-</div>
+<body>
+<h1>FREE BESPLATNO SMOTRET ONLAIN</h1>
+<a asp-page="Create" class="btn btn-primary">Add book</a>
+<table>
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Release date</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var bookItem in Model.Books)
+    {
+        <tr>
+            <td>@bookItem.Title</td>
+            <td>@bookItem.Author</td>
+            <td>@bookItem.ReleaseDate</td>
+            <td>
+                <a asp-page="Edit" asp-route-id="@bookItem.Id">Edit</a>
+                <a asp-page="Delete" asp-route-id="@bookItem.Id">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
 </body>
 </html>
